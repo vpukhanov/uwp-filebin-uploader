@@ -1,0 +1,190 @@
+﻿<Page
+    x:Class="Filebin_Upload.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Filebin_Upload"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Storyboard x:Name="BeginUploadStoryboard" FillBehavior="HoldEnd">
+            <DoubleAnimation Storyboard.TargetName="Step1_Header" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="0" Duration="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Step1_Display" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="0" Duration="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Step3_Header" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="0" Duration="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Step3_Display" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="0" Duration="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Step2_Header" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="1" Duration="00:00:00.5000000" BeginTime="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Step2_Display" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="1" Duration="00:00:00.5000000" BeginTime="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+        <Storyboard x:Name="ResetViewStoryboard" FillBehavior="HoldEnd">
+            <DoubleAnimation Storyboard.TargetName="Step1_Header" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="1" Duration="00:00:00.5000000" BeginTime="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Step1_Display" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="1" Duration="00:00:00.5000000" BeginTime="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Step3_Header" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="0" Duration="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Step3_Display" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="0" Duration="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Step2_Header" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="0" Duration="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Step2_Display" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="0" Duration="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+        <Storyboard x:Name="FinishUploadStoryboard" FillBehavior="HoldEnd">
+            <DoubleAnimation Storyboard.TargetName="Step1_Header" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="0" Duration="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Step1_Display" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="0" Duration="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Step2_Header" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="0" Duration="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Step2_Display" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="0" Duration="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Step3_Header" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="1" Duration="00:00:00.5000000" BeginTime="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Step3_Display" Storyboard.TargetProperty="(UIElement.Opacity)"
+                             To="1" Duration="00:00:00.5000000" BeginTime="00:00:00.5000000">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" 
+          AllowDrop="True" DragOver="Grid_DragOver" Drop="Grid_Drop" x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="17*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Style="{ThemeResource HeaderTextBlockStyle}"
+                   x:Name="Step1_Header" Opacity="1" x:Uid="Step1_Header">
+            Filebin
+        </TextBlock>
+        <!-- for now we disable focus visuals, will re-enable them when working on xbox update -->
+        <Button Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="48" Width="48"
+                Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                UseSystemFocusVisuals="False"
+                x:Name="OpenSettingsFlyoutButton">
+            <Button.Flyout>
+                <Flyout x:Name="SettingsFlyout" Opening="SettingsFlyout_Opening">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Style="{ThemeResource BodyTextBlockStyle}" x:Uid="InstanceBaseUrlHint">Filebin instance base URL:</TextBlock>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <TextBox x:Name="FilebinBaseUrlTextBox" Text="https://filebin.net/" PlaceholderText="https://filebin.net" Width="250" InputScope="Url" />
+                            <Button x:Name="SaveBaseUrlButton" Background="Transparent" Margin="5,0,0,0" Click="SaveBaseUrlButton_Click">
+                                <SymbolIcon Symbol="Save"/>
+                            </Button>
+                            <Button x:Name="ResetBaseUrlButton" Background="Transparent" Margin="5,0,0,0" Click="ResetBaseUrlButton_Click">
+                                <SymbolIcon Symbol="Undo"/>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                </Flyout>
+            </Button.Flyout>
+            <SymbolIcon Symbol="Setting"/>
+        </Button>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Style="{ThemeResource SubheaderTextBlockStyle}"
+                   x:Name="Step2_Header" Opacity="0" x:Uid="Step2_Header">
+            Upload in progress...
+        </TextBlock>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Style="{ThemeResource SubheaderTextBlockStyle}"
+                   x:Name="Step3_Header" Opacity="0" x:Uid="Step3_Header">
+            Upload finished!
+        </TextBlock>
+        
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Style="{ThemeResource SubheaderTextBlockStyle}"
+                   x:Name="Step1_Display" Opacity="1" x:Uid="Step1_Display">
+            Drag and drop your files here
+        </TextBlock>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top"  Orientation="Vertical" Margin="0,5,0,0"
+                    x:Name="Step2_Display" Opacity="0">
+            <TextBlock Style="{ThemeResource TitleTextBlockStyle}" x:Name="FileNameTextBlock">filename.ext</TextBlock>
+            <ProgressRing Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" IsActive="True" Height="60" Width="60" Margin="0,10,0,0" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Orientation="Vertical"
+                    x:Name="Step3_Display" Opacity="0">
+            <TextBlock Style="{ThemeResource TitleTextBlockStyle}" x:Name="BinLinkTextBlock">
+                http://filebin.net/bin_id
+            </TextBlock>
+            <Button HorizontalAlignment="Center" Margin="0,10,0,0" x:Name="CopyLinkButton" Click="CopyLinkButton_Click" x:Uid="CopyLinkButton">Copy</Button>
+        </StackPanel>
+    </Grid>
+</Page>
