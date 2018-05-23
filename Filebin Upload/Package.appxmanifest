@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="ff137eab-7b69-4fb0-aa64-272c2d7b1c93" Publisher="CN=vyach" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="ff137eab-7b69-4fb0-aa64-272c2d7b1c93" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="40337VyacheslavPukhanov.FilebinUploader" Publisher="CN=A9C1C36A-6D49-4711-8E5A-234CDA819DE7" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="c8b8d815-8763-43a5-abc9-a60d581c2e93" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>ms-resource:ApplicationName</DisplayName>
     <PublisherDisplayName>Vyacheslav Pukhanov</PublisherDisplayName>
